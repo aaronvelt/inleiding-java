@@ -9,9 +9,12 @@ public class H081 extends Applet {
     private Button knop;
     private Button knopje;
     private String s;
+    private Label label;
 
     @Override
     public void init() {
+        label = new Label("Type maar iets in");
+        add(label);
         knop = new Button("OK");
         add(knop);
         knop.addActionListener(new Knoplistener() );
