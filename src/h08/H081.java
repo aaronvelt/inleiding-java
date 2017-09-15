@@ -13,6 +13,7 @@ public class H081 extends Applet {
 
     @Override
     public void init() {
+        //decleratie
         label = new Label("Type maar iets in");
         add(label);
         knop = new Button("OK");
@@ -41,6 +42,7 @@ public class H081 extends Applet {
     }
 
     @Override
+    //tekst laten verschijnen
     public void paint(Graphics g) {
         g.drawString(s,50,60);
     }
