@@ -4,13 +4,23 @@ import java.applet.Applet;
 import java.awt.*;
 
 public class PraktijkH6 extends Applet {
+    double a;
+    double b;
+    double c;
+    double gemiddelde;
+
     @Override
     public void init() {
-
+       a = 6.3;
+       b = 5.9;
+       c = 6.9;
+       gemiddelde =(a+b+c) / 3;
+       gemiddelde = (int) (gemiddelde*10);
+       gemiddelde = gemiddelde / 10;
     }
 
     @Override
     public void paint(Graphics g) {
-        g.drawString("Het gemmidelde is  "+(5.9+6.3+6.9)/3,20,20);
+        g.drawString("Het gemmidelde is:  "+ gemiddelde,20,20);
     }
 }
