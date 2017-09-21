@@ -7,24 +7,25 @@ import java.awt.event.ActionListener;
 
 public class H802 extends Applet {
     Button knop;
-    int a;
-    int b;
-    int c;
-    int d;
+    int hmannen;
+    int hvrouwen;
+    int mleerling;
+    int vleerling;
     String s;
     String z;
     String y;
     String h;
     String t;
     int totaal;
+    int teller;
 
     @Override
     public void init() {
-        a = 60;
-        b = 50;
-        c = 40;
-        d = 35;
-        totaal = ( a + b + c + d );
+        hmannen = 0;
+        hvrouwen = 0;
+        mleerling = 0;
+        vleerling = 0;
+        totaal = ( hmannen + hvrouwen + mleerling + vleerling );
         knop = new Button("M");
         add(knop);
         knoplistener kl = new knoplistener();
@@ -46,39 +47,37 @@ public class H802 extends Applet {
     @Override
     public void paint(Graphics g) {
         //zinnen voor de getallen
-        g.drawString("aantal mannen:",60,50);
-        g.drawString("aantal vrouwen:",60,70);
-        g.drawString("aantal potentiële mannen:",4,90);
-        g.drawString("aantal potentiële vrouwen:",3,110);
-        g.drawString("totaal:",113,130);
-        g.drawString(s,150,50);
-        g.drawString(z,150,70);
-        g.drawString(y,150,90);
-        g.drawString(h,150,110);
-        g.drawString(t + totaal,150,130);
+        g.drawString("aantal mannen: " + hmannen,60,50);
+        g.drawString("aantal vrouwen: " + hvrouwen,60,70);
+        g.drawString("aantal potentiële mannen: " + mleerling,4,90);
+        g.drawString("aantal potentiële vrouwen: " + vleerling,3,110);
+        g.drawString("totaal: " + totaal,113,130);
     }
     class knoplistener implements ActionListener{
         public void actionPerformed( ActionEvent e ){
-            s = "60";
+            hmannen++;
+            totaal++;
             repaint();
         }
     }
     class knopjelistener implements ActionListener{
         public void actionPerformed( ActionEvent e ){
-            z = "50";
+            hvrouwen++;
+            totaal++;
             repaint();
         }
     }
     class knoperlistener implements ActionListener{
         public void actionPerformed( ActionEvent e ){
-            y = "40";
+            mleerling++;
+            totaal++;
             repaint();
         }
     }
     class knopkelistener implements ActionListener{
         public void actionPerformed( ActionEvent e ){
-            h = "35";
-            t = "";
+            vleerling++;
+            totaal++;
             repaint();
         }
     }
