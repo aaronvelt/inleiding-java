@@ -10,32 +10,31 @@ public class H083 extends Applet {
     TextField Tekstvak;
     String s;
     Label label;
-    Double getal;
-    int berekening;
+    double getal;
 
     @Override
     public void init() {
         label = new Label("type hier je beddrag->");
         add(label);
         knop = new Button();
-        knop.setLabel("Bereken");
+        knop.setLabel("OK");
         knop.addActionListener(new KnopListener());
         add(knop);
         Tekstvak = new TextField(20);
         Tekstvak.addActionListener(new TekstvakListener());
         add(Tekstvak);
-        berekening = berekening/100*21+berekening;
+        getal = getal / 100 * 121;
     }
 
     @Override
     public void paint(Graphics g) {
-        g.drawString(s , 50, 70);
+        g.drawString("" + getal / 100 * 121 , 50, 70);
     }
     {
     }
     class TekstvakListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-            s = Tekstvak.getText();
+            String s = Tekstvak.getText();
             getal = Double.parseDouble( s );
             repaint();
         }
@@ -43,6 +42,7 @@ public class H083 extends Applet {
     class KnopListener implements ActionListener	{
         public void actionPerformed( ActionEvent e ) {
             s = Tekstvak.getText();
+            getal = Double.parseDouble( s );
             repaint();
         }
     }
