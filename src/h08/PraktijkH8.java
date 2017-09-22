@@ -12,20 +12,18 @@ public class PraktijkH8 extends Applet {
     Button knopD;
     TextField tekstvakA;
     TextField tekstvakB;
-    String  uitkomst;
-    double getalA;
-    double getalB;
+    double  uitkomst;
+    int getalA;
+    int getalB;
 
 
     @Override
     public void init() {
         //eerste tekstvak
         tekstvakA = new TextField(10);
-        tekstvakA.addActionListener(new tekstvakAListener());
         add(tekstvakA);
         //tweede tekstvak
         tekstvakB = new TextField(10);
-        tekstvakB.addActionListener(new tekstvakBListener());
         add(tekstvakB);
         // de * knop
         knopA = new Button();
@@ -49,43 +47,55 @@ public class PraktijkH8 extends Applet {
         add(knopD);
 
     }
-    class tekstvakAListener implements ActionListener {
-        public void actionPerformed(ActionEvent e) {
-            tekstvakA.setText("");
-            repaint();
-        }
-    }
-    class tekstvakBListener implements ActionListener {
-        public void actionPerformed(ActionEvent e) {
-            tekstvakB.setText("");
-            repaint();
-        }
-    }
     //de * knop
     class knopAListener implements ActionListener	{
         public void actionPerformed( ActionEvent e ) {
-            tekstvakB.setText("");
+           String tv1 = tekstvakA.getText();
+           double invoer1 = Double.parseDouble(tv1);
+           String tv2 = tekstvakB.getText();
+           double invoer2 = Double.parseDouble(tv2);
+           uitkomst = invoer1*=invoer2;
+            tekstvakA.setText("" + uitkomst);
+            tekstvakB.setText(" ");
             repaint();
         }
     }
     //de / knop
     class knopBListener implements ActionListener	{
         public void actionPerformed( ActionEvent e ) {
-            tekstvakB.setText("");
+            String tv1 = tekstvakA.getText();
+            double invoer1 = Double.parseDouble(tv1);
+            String tv2 = tekstvakB.getText();
+            double invoer2 = Double.parseDouble(tv2);
+            uitkomst = invoer1/=invoer2;
+            tekstvakA.setText("" + uitkomst);
+            tekstvakB.setText(" ");
             repaint();
         }
     }
     //de + knop
     class knopCListener implements ActionListener	{
         public void actionPerformed( ActionEvent e ) {
-            tekstvakB.setText("");
+            String tv1 = tekstvakA.getText();
+            double invoer1 = Double.parseDouble(tv1);
+            String tv2 = tekstvakB.getText();
+            double invoer2 = Double.parseDouble(tv2);
+            uitkomst = invoer1+=invoer2;
+            tekstvakA.setText("" + uitkomst);
+            tekstvakB.setText(" ");
             repaint();
         }
     }
     //de - knop
     class knopDListener implements ActionListener	{
         public void actionPerformed( ActionEvent e ) {
-            tekstvakB.setText("");
+            String tv1 = tekstvakA.getText();
+            double invoer1 = Double.parseDouble(tv1);
+            String tv2 = tekstvakB.getText();
+            double invoer2 = Double.parseDouble(tv2);
+            uitkomst = invoer1-=invoer2;
+            tekstvakA.setText("" + uitkomst);
+            tekstvakB.setText(" ");
             repaint();
         }
     }
