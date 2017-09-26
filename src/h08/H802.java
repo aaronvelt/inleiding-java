@@ -11,13 +11,7 @@ public class H802 extends Applet {
     int hvrouwen;
     int mleerling;
     int vleerling;
-    String s;
-    String z;
-    String y;
-    String h;
-    String t;
     int totaal;
-    int teller;
 
     @Override
     public void init() {

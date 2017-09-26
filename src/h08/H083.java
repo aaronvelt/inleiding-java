@@ -30,8 +30,6 @@ public class H083 extends Applet {
     public void paint(Graphics g) {
         g.drawString("" + getal / 100 * 121 , 50, 70);
     }
-    {
-    }
     class TekstvakListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             String s = Tekstvak.getText();
