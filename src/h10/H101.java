@@ -27,9 +27,7 @@ public class H101 extends Applet {
             if (getal > uitkomst ){
                 uitkomst = getal;
             }
-            else {
 
-            }
             repaint();
 
         }
