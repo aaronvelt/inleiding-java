@@ -8,8 +8,7 @@ import java.awt.event.ActionListener;
 public class H105 extends Applet {
     Label label;
     TextField tekstvak;
-    int cijfer;
-    int newcijfer;
+    Double gemmidelde;
     String s, tekst;
 
     public void init() {
@@ -22,12 +21,13 @@ public class H105 extends Applet {
     class Teksvaklistener implements ActionListener{
         public void actionPerformed (ActionEvent e){
             s = tekstvak.getText();
-            cijfer = Integer.parseInt( s );
-            switch (cijfer){
-                case 1:
-
-                    tekst = cijfer + "dit is onvoldoende";
-                    break;
+            Double cijfer = Double.parseDouble( s );
+            if ( cijfer > 5 ){
+                gemmidelde = gemmidelde + (cijfer * 2) / 2;
+                tekst = gemmidelde + "Het is voldoende";
+            }
+            else{
+                tekst = gemmidelde + "Het is onvoldoende";
             }
             repaint();
         }
