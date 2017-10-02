@@ -27,7 +27,7 @@ public class H105 extends Applet {
                 tekst = gemmidelde + "Het is voldoende";
             }
             else{
-                tekst = gemmidelde + "Het is onvoldoende";
+                tekst = cijfer + "Het is onvoldoende";
             }
             repaint();
         }

@@ -46,9 +46,8 @@ public class PraktijkH10 extends Applet {
             if ( cijfer == 8 || cijfer == 9 || cijfer == 10){
                 tekst = "Je cijfer is goed";
             }
-            else{
+            if ( cijfer > 10 )
                 tekst = "Je hebt een verkeerd cijfer ingevoerd";
-            }
             repaint();
         }
     }
