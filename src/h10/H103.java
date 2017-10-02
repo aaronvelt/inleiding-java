@@ -32,40 +32,40 @@ public class H103 extends Applet {
             maand = Integer.parseInt( s );
             switch (maand){
                 case 1:
-                    tekst = "Januari";
+                    tekst = "Januari dagen 31";
                     break;
                 case 2:
-                    tekst = "Febrauri";
+                    tekst = "Febrauri dagen 28 of 29";
                     break;
                 case 3:
-                    tekst = "Maart";
+                    tekst = "Maart dagen 31";
                     break;
                 case 4:
-                    tekst = "April";
+                    tekst = "April dagen 30";
                     break;
                 case 5:
-                    tekst = "Mei";
+                    tekst = "Mei dagen 31";
                     break;
                 case 6:
-                    tekst = "Juni";
+                    tekst = "Juni dagen 30";
                     break;
                 case 7:
-                    tekst = "Juli";
+                    tekst = "Juli dagen 31";
                     break;
                 case 8:
-                    tekst = "Augustus";
+                    tekst = "Augustus dagen 30";
                     break;
                 case 9:
-                    tekst = "September";
+                    tekst = "September dagen 31";
                     break;
                 case 10:
-                    tekst = "Oktober";
+                    tekst = "Oktober dagen 30";
                     break;
                 case 11:
-                    tekst = "November";
+                    tekst = "November dagen 31";
                     break;
                 case 12:
-                    tekst = "December";
+                    tekst = "December 30 dagen";
                     break;
                 default:
                     tekst = "Dit is geen maand";
