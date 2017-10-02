@@ -6,15 +6,16 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class H105 extends Applet {
-    Label label;
     TextField tekstvak;
     Double gemmidelde;
     String s, tekst;
+    int count;
 
     public void init() {
         tekstvak = new TextField("",5);
         tekstvak.addActionListener(new Teksvaklistener());
         tekst = "";
+        gemmidelde = 0.0;
         add(tekstvak);
     }
 
@@ -22,18 +23,20 @@ public class H105 extends Applet {
         public void actionPerformed (ActionEvent e){
             s = tekstvak.getText();
             Double cijfer = Double.parseDouble( s );
-            if ( cijfer > 5 ){
-                gemmidelde = gemmidelde + (cijfer * 2) / 2;
-                tekst = gemmidelde + "Het is voldoende";
+            repaint();
+            if ( cijfer >= 5.5){
+                tekst = "voldoende";
             }
             else{
-                tekst = cijfer + "Het is onvoldoende";
+                tekst = "onvoldoende";
             }
-            repaint();
+            gemmidelde = gemmidelde + cijfer;
+            count++;
         }
     }
 
     public void paint(Graphics g) {
         g.drawString(tekst,50,60);
+        g.drawString("" + gemmidelde/count,50,80);
     }
 }
