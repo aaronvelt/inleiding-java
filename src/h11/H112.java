@@ -12,13 +12,13 @@ public class H112 extends Applet {
 
     @Override
     public void paint(Graphics g) {
-        int teller = 10;
+        int teller = 20;
         int x = 0;
 
         do {
             x += 20;
             g.drawString("" + teller, x, 50);
-            teller++;
+            teller--;
         } while(teller >= 10 && teller <= 20);
     }
 }
