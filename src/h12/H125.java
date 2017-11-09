@@ -1,15 +1,14 @@
 package h12;
-//Maak een applet met een tabel met getallen, waarin de gebruiker een getal kan intikken in een tekstvak.
-// Als de gebruiker op de OK-knop klikt dan wordt de waarde opgezocht in de tabel en staat op het scherm niet alleen
-// dat de waarde is gevonden maar ook de index. Als de waarde niet is gevonden dan wordt daarvan melding gedaan.
+//Zorg ervoor dat de lus waarin gezocht wordt naar een bepaalde waarde in voorbeeld 12.4
+// stopt als de waarde gevonden is.
+// Zoek op internet hoe je dit kunt doen.
 import java.applet.Applet;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class H124 extends Applet{
+public class H125 extends Applet {
     boolean gevonden;
-    boolean geklikt;
     Button knop;
     TextField tekstvak;
     int[]  getallen = { 1, 4, 8, 12, 9, 7};
@@ -24,7 +23,6 @@ public class H124 extends Applet{
         knop.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                geklikt = true;
                 gevonden = false;
                 int input = Integer.parseInt( tekstvak.getText());
                 for (int i = 0; i < getallen.length; i++) {
@@ -43,12 +41,13 @@ public class H124 extends Applet{
 
     @Override
     public void paint(Graphics g) {
-        if(gevonden == true && geklikt == true) {
+        if(gevonden == true) {
             g.drawString("de waarde is gevonden", 50, 60);
             g.drawString("index = " + indexPositie, 50, 75);
         }
-        if(gevonden == false && geklikt == true) {
+        if(gevonden == false) {
             g.drawString("De waarde is niet gevonden",50,60);
         }
     }
+
 }
