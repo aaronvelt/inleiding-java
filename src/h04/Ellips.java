@@ -13,6 +13,6 @@ public class Ellips extends Applet {
     public void paint(Graphics g) {
         setBackground(Color.blue);
         g.setColor(Color.yellow);
-        g.fillArc(100,100,150,75,90,365);
+        g.fillArc(100, 100, 150, 75, 90, 365);
     }
 }
