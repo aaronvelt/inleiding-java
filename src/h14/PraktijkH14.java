@@ -42,15 +42,7 @@ public class PraktijkH14 extends Applet {
                         aantal = aantal - 3;
                     } else if (aantal == 19 || aantal == 15 || aantal == 11 || aantal == 7 || aantal == 3) {
                         aantal = aantal - 2;
-                    } else if (aantal == 21) {
-                        aantal = aantal - randomg;
-                    } else if (aantal == 17) {
-                        aantal = aantal - randomg;
-                    } else if (aantal == 13) {
-                        aantal = aantal - randomg;
-                    } else if (aantal == 9) {
-                        aantal = aantal - randomg;
-                    } else if (aantal == 5) {
+                    } else if (aantal == 21 || aantal == 17 || aantal == 13 || aantal == 9 || aantal == 5) {
                         aantal = aantal - randomg;
                     } else if (aantal == 1 && input == 1 || aantal == 1 && input == 2 || aantal == 1 && input == 3) {
                         aantal = aantal - 1;
@@ -62,7 +54,7 @@ public class PraktijkH14 extends Applet {
                         uitslag = "Je hebt verloren";
                     }
                 }
-                if (input > 3) {
+                if (input > 3 || input == 0) {
                     foutmelding = "Foute Invoer!!!";
                 }
                 repaint();
